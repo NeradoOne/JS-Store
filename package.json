@@ -2,7 +2,7 @@
   "name": "js-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NeradoOne.github.io",
+  "homepage": "https://neradoone.github.io",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
