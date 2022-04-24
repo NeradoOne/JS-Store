@@ -1,5 +1,6 @@
 import './App.css';
 import Hero from './components/Header';
+import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <ItemListContainer name='Coder' />
     </div>
   );
 }
