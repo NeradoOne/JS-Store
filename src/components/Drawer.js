@@ -9,9 +9,9 @@ const Drawer = () => {
                 </label>
                 <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52 text-left">
                     <Link to='/'><li>Home</li></Link>
-                    <Link to='/pokemon'><li>Sales</li></Link>
+                    <Link to='/'><li>Sales</li></Link>
                     <Link to='/products'><li>Products</li></Link>
-                    <li>About</li>
+                    <Link to='/'><li>About</li></Link>
                 </ul>
             </div>
         </div>

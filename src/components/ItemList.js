@@ -7,12 +7,13 @@ const ItemList = () => {
   const [load, setLoad] = useState('true')
 
   useEffect(() => {
-    const URL = 'https://api.mercadolibre.com/sites/MLA/search?category=MLA1055&limit=10'
+    const URL = 'https://api.mercadolibre.com/sites/MLA/search?category=MLA1648&limit=10'
 
     fetch(URL)
       .then(res => res.json())
       .then(prod => { setProducts(prod.results) })
   }, [])
+  //uso del setTimeout para cumplircon la consigna
   setTimeout(() => { setLoad(false) }, 2000)
 
   return (
