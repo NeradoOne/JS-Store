@@ -1,8 +1,9 @@
 import React from 'react'
+import ItemList from './ItemList'
 
 const ItemListContainer = ( {name} ) => {
   return (
-    <h2>Hi {name}, welcome to ReactStore </h2>
+    <ItemList />
   )
 }
 
