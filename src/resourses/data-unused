@@ -1,0 +1,101 @@
+,
+            "detail":"Núcleos totales: 12
+             # de núcleos de rendimiento: 8
+             # de núcleos eficientes: 4
+             Subprocesos totales: 20
+             Frecuencia turbo máxima: 5,
+            00 GHz
+             Frecuencia de la tecnología Intel® Turbo Boost Max 3.0 ‡: 5,
+            00 GHz
+             Frecuencia turbo máxima de núcleo de rendimiento: 4,
+            90 GHz
+             Frecuencia turbo máxima de núcleo eficiente: 3,
+            80 GHz
+             Frecuencia base del núcleo de rendimiento: 3,
+            60 GHz
+             Frecuencia base de núcleo eficiente: 2,
+            70 GHz
+             Cache: Caché inteligente Intel® de 25 MB
+             Caché L2 total: 12 MB
+             Potencia base del procesador: 125 W
+             Potencia turbo máxima: 190 W"
+
+
+"detail":"Kingston FURY™ Beast DDR4 RGB1 ofrece un aumento de rendimiento y estilo con velocidades de hasta 3733MT / s, estilo agresivo e iluminación RGB que recorre la longitud del módulo para efectos suaves e impresionantes.
+             Personalice los efectos de iluminación RGB utilizando el software Kingston FURY CTRL y su tecnología patentada infrared Sync. 
+             
+             Capacidad: 8GB
+             Frequencia: 3600MHz
+             Voltage: 1.2V
+             Temperature de operacion: 0°C to 70°C
+             Dimensiones: 133.35mm x 41.24mm x 7mm
+             Iluminacion: RGB"
+
+             ,
+            "detail":"Motor gráfico: NVIDIA® GeForce RTX ™ 3060 TI
+             Estándar de bus: PCI Express 4.0
+             OpenGL: OpenGL®4.6
+             Memoria de video: GDDR6 de 8 GB
+             Reloj del motor: Modo OC - 1695 MHz (Boost Clock),Modo Gaming - 1665 MHz (Boost Clock)
+             Núcleo CUDA: 4864
+             Velocidad de memoria: 14 Gbps
+             interfaz de memoria: 192 bits
+             Resolución máxima digital: 7680 x 4320
+             PSU recomendada: 750W
+             Conectores de poder: 1 x 8 pines"
+
+             ,
+            "detail":"Modelo: GP-P850GM
+             Tipo: Factor de forma Intel ATX 12V v2.31
+             PFC: PFC activo (> 0,
+            9 típico)
+             Voltaje de entrada: 100-240 Vac (rango completo)
+             Corriente de entrada: 12-6 A
+             Frecuencia de entrada: 60-50 Hz
+             Capacidad de salida: 850W
+             Dimensión: 150 x 140 x 86 mm
+             Tipo de ventilador: 1 ventilador de cojinete hidráulico (HYB) de 20 mm
+             80 PLUS: GOLD
+             Eficiencia: 90% a carga típica
+             MTBF: > 100,
+            000 horas
+             Proteccion: OVP / OPP / SCP / UVP / OCP / OTP
+             Potencia buena señal: 100-500 ms
+             Tiempo de espera: > 16 ms
+             Tipo de cable: Plano, Todo negro"
+
+             ,
+            "detail":"Dimensión (H X W X D): 416 x 210 x 454 mm
+             (16,
+            4 x 8,
+            3 x 17,
+            9 pulgadas)
+             Peso neto: 7.6 kg / 16.75 lbs.
+             Panel lateral: Vidrio templado de 4 mm x1 (izquierda)
+             Color Exterior e interior: Negro
+             Material: SPCC
+             Sistema de refrigeración Trasero (escape): ventilador de 120 x 120 x 25 mm
+             (1000 rpm,
+            16 dBA)
+             Bahías
+             Accesibles -
+             Oculto - 2 x 3.5 '' o 3 x 2.5 ''
+             Ranuras de expansión: 7
+             Placas base: 6.7 "x 6.7" (Mini ITX),
+            9.6 "x 9.6" (Micro ATX),
+            12 "x 9.6" (ATX)
+             Puertos: USB 3.0 x 2, audio HD x 1, botón RGB x 1
+             PSU: PSU PSU estándar (opcional)
+             Soporte para cooler
+             Delantero: 3 x 120 mm,
+            2 x 140 mm
+             Superior: 2 x 120 mm,
+            2x 140 mm
+             Trasero: 1 x 120 mm,
+            1 x 140 mm
+             Soporte para radiador
+             Delantero: 1 x 240 mm,
+            1 x 280 mm
+             Superior: 1 x 240 mm
+             Despeje: Limitación de altura del enfriador de CPU: 180 mm
+             Limitación de longitud VGA: 320 mm"
