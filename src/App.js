@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Hero from './components/Hero';
-import ItemList from './components/ItemList';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './components/ItemListContainer';
 // import ItemListContainer from './components/ItemListContainer';
 import MeliApi from './components/MeliApi';
 // import RMapi from './components/RMapi';
@@ -15,7 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Hero/>} />
           <Route path='/pokemon' element={<MeliApi/>} />
-          <Route path='/products' element={<ItemList />} />
+          <Route path='/products' element={<ItemListContainer />} />
+          <Route path='/products/:id' element={<ItemDetailContainer />} />
           {/* <Hero />
           <ItemListContainer name='Coder' />
           <MeliApi /> */}
