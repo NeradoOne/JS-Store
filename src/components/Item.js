@@ -12,11 +12,11 @@ const Item = ({ product }) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title ">{product.title}</h2>
                 <div className="card-actions justify-end">
-                    <button id={product.productId} className="btn btn-primary">
-                        <Link to={`/products/${product.productId}`}>
+                    <Link to={`/products/${product.productId}`}>
+                        <button id={product.productId} className="btn btn-primary">
                             $ {product.price}
-                        </Link>
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
