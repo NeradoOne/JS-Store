@@ -1,6 +1,6 @@
 [
   {
-    "type": "Mothers",
+    "type": "Motherboard",
     "title": "Mother MSI MAG Z690 TOMAHAWK WIFI DDR4 s1700 (12va Gen)",
     "productId": 1,
     "price": 49044,
@@ -9,7 +9,7 @@
     "detail": "CPU (soporte máximo): i9 \nSocket: 1700 \nChipset: Intel® Z690 Chipset \nRanuras DIMM duales: 4 \nMemoria máxima (GB): 128 \nPCI-E x16: 3 \nPCI-E x1: 1 \nSATAIII: 6 \nM .2 Ranura: 4 \nRAID: 0/1/5/10 \nLAN: 1x Intel® I225-V 2.5G LAN \nWiFi y Bluetooth: Módulo Intel® Wi-Fi 6 \nPuertos: USB 3.2 (Frontal) 1 (Gen 2, Tipo C), 2 (Gen 1, tipo A) \nPuertos: USB 3.2 (posteriores) 1 (2x2 de generación, tipo C), 3 (2 de generación, tipo A), 2 (1 de generación, tipo A) \nPuertos USB 2.0 (frontales): 4 \npuertos USB 2.0 (posteriores): 2 \npuertos de audio (posteriores): 5+ S/PDIF óptico (Códec Realtek® ALC4080) \nDisplayPort: 1 \nHDMI: 1 \nDirectX: 12 \nFactor de forma: ATX \nCrossFire: Y \nSistema operativo compatible con: Windows® 11 64 -bit, Windows® 10 de 64 bits"
   },
   {
-    "type": "processor",
+    "type": "Processor",
     "title": "PROCESADOR INTEL CORE I7 12700K ALDER LAKE S1700",
     "productId": 2,
     "price": 75476,
@@ -17,7 +17,7 @@
     "stock": 5
   },
   {
-    "type": "ram",
+    "type": "Ram",
     "title": "Memoria DDR4 8Gb 3600mhz Kingston FURY BEAST RGB",
     "productId": 3,
     "price": 7813,
@@ -25,7 +25,7 @@
     "stock": 5
   },
   {
-    "type": "graphic",
+    "type": "Graphic",
     "title": "Placa de Video RTX 3060 TI TUF Gaming",
     "productId": 4,
     "price": 149636,
@@ -33,7 +33,7 @@
     "stock": 5
   },
   {
-    "type": "power",
+    "type": "Power Supply",
     "title": "Fuente 850W +Gold Gigabyte P850GM Modular",
     "productId": 5,
     "price": 18650,
@@ -41,7 +41,7 @@
     "stock": 5
   },
   {
-    "type": "case",
+    "type": "Case",
     "title": "Gabinete Thermaltake H200TG",
     "productId": 6,
     "price": 9594,

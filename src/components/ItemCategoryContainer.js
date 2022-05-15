@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { getProducts } from '../helpers/getProducts';
 import Category from './Category';
 import ItemList from './ItemList';
 import Loading from './Loading';
@@ -12,11 +13,7 @@ const ItemCategoryContainer = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        const URL = 'https://run.mocky.io/v3/45240913-4047-49a4-a2a1-5b937feed2a5'
-        fetch(URL)
-            .then(res => res.json())
-            .then(data => setProduct(data.filter(x => x.type === type)))
-            .finally(() => setLoad(false))
+        getProducts(setProduct, setLoad, type)
     }, []);
 
     useEffect(() => {
