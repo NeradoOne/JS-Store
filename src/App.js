@@ -5,12 +5,12 @@ import ItemCategoryContainer from './components/ItemCategoryContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
-import CartContextProvider from './context/cartContextProvider';
+// import CartContextProvider from './context/CartContextProvider';
 
 function App() {
   return (
     <div className="App">
-      <CartContextProvider>
+      {/* <CartContextProvider> */}
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -20,7 +20,7 @@ function App() {
             <Route path='/category/:type' element={<ItemCategoryContainer />} />
           </Routes>
         </BrowserRouter>
-      </CartContextProvider>
+      {/* </CartContextProvider> */}
     </div>
   );
 }
