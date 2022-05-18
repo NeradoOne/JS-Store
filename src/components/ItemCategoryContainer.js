@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getProducts } from '../helpers/getProducts';
 import Category from './Category';
-import ItemList from './ItemList';
+import ItemList from './ItemList/ItemList';
 import Loading from './Loading';
 
 const ItemCategoryContainer = () => {

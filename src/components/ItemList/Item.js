@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-
-
+import { currency } from "../../helpers/currency"
 
 const Item = ({ product }) => {
 
@@ -12,9 +11,9 @@ const Item = ({ product }) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title ">{product.title}</h2>
                 <div className="card-actions justify-end">
-                    <Link to={`/products/${product.productId}`}>
+                    <Link to={`/products/${product.type}/${product.productId}`}>
                         <button id={product.productId} className="btn btn-primary">
-                            $ {product.price}
+                        {currency(product.price)}
                         </button>
                     </Link>
                 </div>

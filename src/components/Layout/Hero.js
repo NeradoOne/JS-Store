@@ -1,4 +1,4 @@
-import ItemListContainer from "./ItemListContainer"
+import ItemListContainer from "../ItemList/ItemListContainer"
 
 const Hero = () => {
   return (

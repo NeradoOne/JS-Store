@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "../CartWidget/CartWidget"
 import Drawer from "./Drawer"
 import Searchbar from "./Searchbar"
 
