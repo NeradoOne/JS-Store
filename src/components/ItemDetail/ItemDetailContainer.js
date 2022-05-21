@@ -6,20 +6,22 @@ import Loading from "../Layout/Loading";
 
 const ItemDetailContainer = () => {
 
-    const { id } = useParams();
-    const [product, setProduct] = useState([]);
-    const [load, setLoad] = useState('true')
+  const { id } = useParams();
+  const [product, setProduct] = useState([]);
+  const [load, setLoad] = useState('true')
 
-    useEffect(() => {
-        // Function( setProduct, setLoad, category, productId )
-        getProducts(setProduct, setLoad, false, id)
-    }, [])
+  useEffect(() => {
+    // Function( setProduct, setLoad, category, productId )
+    getProducts(setProduct, setLoad, false, id)
+  }, [])
 
-    return (
-            load ?
-            <Loading /> :
-            <ItemDetail product={product} />
-    )
+  return (
+    load ?
+      <Loading /> :
+      <>
+        <ItemDetail product={product} />
+      </>
+  )
 }
 
 export default ItemDetailContainer
