@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContextProvider'
 import { currency } from '../../helpers/currency';
 
@@ -9,7 +10,7 @@ const CartWidget = () => {
   const { remove } = useCartContext()
   let totalPrice = 0;
   let totalItems = 0
-  cartList.map(i => {totalPrice = i.price * i.quantity + totalPrice; totalItems = i.quantity + totalItems});
+  cartList.map(i => { totalPrice = i.price * i.quantity + totalPrice; totalItems = i.quantity + totalItems });
 
   return (
     <div className="navbar-end">
@@ -21,23 +22,31 @@ const CartWidget = () => {
             <span className="badge badge-sm bg-secondary indicator-item">{totalItems}</span>
           </div>
         </label>
-        <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-base-300 shadow">
+        <div tabIndex={0} className="mt-3 card card-compact dropdown-content bg-base-300 shadow">
           <div className="card-body">
             <span className="font-bold text-lg">{cartList.length} Items</span>
             {cartList.map(i => (
-              <div key={i.productId}>
-                <h2>{i.title}</h2>
-                <button onClick={() => remove(i.productId)} className='card-actions btn btn-circle btn-error btn-xs'>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                </button>
-                <h4>{i.price}<span>x{i.quantity}</span></h4>
-              </div>))}
+              <NavLink className='flex justify-between rounded p-2 my-2 items-center w-72 bg-white' to={`/products/${i.category}/${i.id}`} key={i.id}>
+                <section>
+                  <img className='h-12 rounded-full' src={i.image} />
+                  <div className='ml-2' >
+                    <h3 className='font-bold text-primary' >{i.title}</h3>
+                    <p>Cantidad: {i.quantity}</p>
+                  </div>
+                  <button onClick={() => remove(i.id)} className='card-actions btn btn-circle btn-error btn-outline btn-xs'>
+                    <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" className="w-6 h-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"></path></svg>
+                  </button>
+                </section>
+                <span className='text-info text-lg my-2'>{currency(i.price)}</span>
+              </NavLink>))}
             <span className="text-info">
               {currency(totalPrice)}
             </span>
             <div className="card-actions">
-              <button className="btn btn-primary btn-block">View cart</button>
-              <button onClick={eraseCart} className="btn btn-warning btn-block">Erase cart</button>
+              <Link className="btn btn-primary btn-block" to={'/cart'}>
+                <button>View cart</button>
+              </Link>
+              <button onClick={eraseCart} className="btn btn-warning btn-outline btn-block">Erase cart</button>
             </div>
           </div>
         </div>

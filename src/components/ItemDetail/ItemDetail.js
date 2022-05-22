@@ -11,19 +11,23 @@ const ItemDetail = ({ product }) => {
     addToCart(product, quantity)
    }
   return (
+    <div>
     <div className="hero">
       <div className="hero-content flex-col sm:flex-row">
         <figure >
-          <img className="shadow-2xl" src={product.productImg} alt={product.title} />
+          <img className="shadow-2xl" src={product.image} alt={product.title} />
         </figure>
         <div className=" flex flex-col items-stretch">
           <h1 className="text-5xl ">{product.title}</h1>
           <button className="pointer-events-none col-span-2 btn btn-primary align-baseline ">
               {currency(product.price)}
             </button>
-          <p className="py-8 text">{product.detail === '' ? product.detail : 'No description available'}</p>
           <ItemCount init={1} stock={product.stock} onAdd={handler} />
         </div>
+      </div>
+    </div>
+      <div className="container mx-auto max-w-lg">
+          <p className="py-8 text">{product.detail}</p>
       </div>
     </div>
   )

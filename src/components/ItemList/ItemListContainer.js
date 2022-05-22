@@ -20,7 +20,7 @@ const ItemListContainer = () => {
   }, [category])
 
   useEffect(() => {
-    setCategories(products.map(product => product.type));
+    setCategories(products.map(product => product.category));
   }, [products]);
 
   return (
