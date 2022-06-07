@@ -1,6 +1,7 @@
 import { useCartContext } from "../../context/CartContextProvider";
 import { currency } from "../../helpers/currency";
 import ItemCount from "./ItemCount";
+import GoBackButton from "../Layout/GoBackButton";
 
 const ItemDetail = ({ product }) => {
 
@@ -12,6 +13,7 @@ const ItemDetail = ({ product }) => {
    }
   return (
     <div>
+      <GoBackButton />
     <div className="hero">
       <div className="hero-content flex-col sm:flex-row">
         <figure >

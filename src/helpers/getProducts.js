@@ -1,7 +1,7 @@
 // const URL = 'https://run.mocky.io/v3/600ca878-d052-44b2-8242-2f6a3ad6317a'
 
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore } from "firebase/firestore/lite";
+import { collection, getDocs, doc, getDoc, getDocFromCache , getFirestore } from "firebase/firestore/lite";
 
 
 // export const getProducts = (setProduct, setLoad, category=0, productId=0) => {
@@ -34,8 +34,6 @@ const db = getFirestore(app);
 
 export const getProducts = async ( setProduct, setLoad, category=false, productId=false ) => {
 
-
-
     const itemsCol = collection(db, 'items');
     const itemsSnapshot = await getDocs(itemsCol);
 
@@ -52,8 +50,19 @@ export const getProducts = async ( setProduct, setLoad, category=false, productI
     finally{
       setLoad(false)
     }
+}
 
-  return (
-    <div>getProducts</div>
-  )
+export const getProductById = async (setProduct, setLoad, id) => {
+  const docRef = doc(db, 'items', id)
+  const docSnap = await getDoc(docRef)
+  try {
+    docSnap.exists() ? setProduct(docSnap.data()) :
+    console.log('error on try')
+  }
+  catch(err) {
+    console.error("No such document.", err)
+  }
+  finally{
+    setLoad(false)
+  }
 }

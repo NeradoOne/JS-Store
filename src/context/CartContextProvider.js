@@ -13,7 +13,6 @@ const CartContextProvider = ({ children }) => {
 
     if (isInCart(item.id)) {
       if (isInStock(item.id, quantity)) {
-        
         const newCart = cartList.map(i => i.id == item.id ? { ...i, quantity: i.quantity + quantity } : i)
         setCartList(newCart)
         
@@ -21,35 +20,9 @@ const CartContextProvider = ({ children }) => {
         console.error('Not enoght stock')
       }
 
-
-      // cartList.map( (i) => {
-      //   if (i.id === item.id) { 
-      //     setCartList([{ ...i, quantity: i.quantity + quantity }])
-      //     console.warn(i)
-      //   } else{
-      //     console.error(i) 
-      //   }})
     } else {
       setCartList([...cartList, { ...item, quantity: quantity }])
     }
-
-
-
-
-    // if (!isInCart(item.id)) {
-    //   setCartList([...cartList, { ...item, quantity }])
-    // } else if (isInStock(item.id, quantity)) {
-    //   cartList.map(p=> p.id===item.id ?  setCartList({...p, quantity: p.quantity + quantity}) :
-    //     console.error('Item not added'))
-    //     // return setCartList(
-    //     //   cartList.map(
-    //     //     product => {
-    //     //       if (product.id === item.id) {
-    //     //         return { ...product, quantity: product.quantity + quantity }
-    //     //       }
-    //     //     }
-    //     //   ))
-    // } console.error('Not enoght stock')
   }
 
 

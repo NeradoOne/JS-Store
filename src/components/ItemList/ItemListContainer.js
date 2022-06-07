@@ -6,6 +6,7 @@ import ItemList from './ItemList'
 import Loading from '../Layout/Loading';
 import '../../App.css';
 
+
 const ItemListContainer = () => {
 
   const { category } = useParams();
@@ -26,7 +27,7 @@ const ItemListContainer = () => {
   return (
     load ?
       <Loading /> :
-      <div >
+      <div>
         <Category categories={categories} />
         <ItemList products={products} />
       </div>

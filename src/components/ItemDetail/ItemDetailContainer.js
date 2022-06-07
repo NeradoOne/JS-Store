@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getProducts } from "../../helpers/getProducts";
+import { getProductById, getProducts } from "../../helpers/getProducts";
 import ItemDetail from "./ItemDetail"
 import Loading from "../Layout/Loading";
 
@@ -12,7 +12,8 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     // Function( setProduct, setLoad, category, productId )
-    getProducts(setProduct, setLoad, false, id)
+    // getProducts(setProduct, setLoad, false, id)
+    getProductById(setProduct, setLoad, id)
   }, [])
 
   return (
