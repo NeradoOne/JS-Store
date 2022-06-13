@@ -1,35 +1,42 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom"
+import { getProductsCategory } from "../../helpers/getProducts";
 
-const Category = ({ categories }) => {
+const Category = () => {
+  const [categories, setCategories] = useState([]);
 
-    return (
-        <div className="collapse">
-            <input type="checkbox" className="peer" />
-            <div className="collapse-title  bg-sky-700 text-primary-content peer-checked:text-secondary-content">
-                Categories
-            </div>
-            <div className="form-control collapse-content  bg-sky-900 text-primary-content peer-checked:text-secondary-content">
-                <Link to='/products'>
-                    <label className="label cursor-pointer">
-                        <span className="text-primary-content font-bold ">All</span>
-                        <input type="checkbox" className="hidden" />
-                    </label>
-                </Link>
-                {categories.map(
-                    category => (
-                        <NavLink 
-                            key={category} to={`/products/${category}`}
-                            className={({ isActive }) => isActive ? "text-accent" : "text-secondary-content"}   >
-                            <label className="label cursor-pointer">
-                                <span >{category}</span>
-                                <input type="checkbox" className="hidden" />
-                            </label>
-                        </NavLink>
-                    )
-                )}
-            </div>
-        </div>
-    )
+  useEffect(() => {
+    getProductsCategory(setCategories)
+  }, []);
+
+  return (
+    <div className="dropdown dropdown-end">
+      {/* <input type="checkbox" className="peer" /> */}
+      <label tabIndex={0} className=" btn btn-ghost text-neutral-content peer-checked:link-primary">
+        Categories
+      </label>
+      <div className="dropdown-content card p-10 bg-transparent text-accent-content peer-checked:text-secondary-content">
+        <Link to='/products'>
+          <label className="label cursor-pointer">
+            <span className="link-secondary font-bold ">All</span>
+            <input type="checkbox" className="hidden" />
+          </label>
+        </Link>
+        {categories.map(
+          category => (
+            <NavLink
+              key={category} to={`/products/${category}`}
+              className={({ isActive }) => isActive ? "link-secondary" : "text-accent-content"}   >
+              <label className="label cursor-pointer">
+                <span className="capitalize" >{category}</span>
+                <input type="checkbox" className="hidden" />
+              </label>
+            </NavLink>
+          )
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default Category

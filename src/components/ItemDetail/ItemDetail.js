@@ -8,7 +8,7 @@ const ItemDetail = ({ product }) => {
   const { addToCart } = useCartContext()
 
   const handler = (quantity) => {
-    // console.log(product,c)
+    console.log(product, quantity)
     addToCart(product, quantity)
    }
   return (
